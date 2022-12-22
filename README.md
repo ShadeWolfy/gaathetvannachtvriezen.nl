@@ -10,3 +10,6 @@
 - [ ] openweatherapi intergreren
 - [ ] zinnen variabel maken
 - [ ] mening vragen bij andere mensen
+- [ ] updaten front voor mobiel
+- [ ] no scroll pc page
+- [ ] stijl updaten
