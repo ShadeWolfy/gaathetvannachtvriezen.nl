@@ -1,0 +1,13 @@
+body {
+    background: #afd1f2;
+    font-family: sans-serif;
+}
+.Title {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.Footer {
+    position: absolute; bottom: 5px; right: 5px;
+    font-size: 12px;
+}
