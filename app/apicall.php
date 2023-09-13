@@ -10,3 +10,10 @@ if ($response === false) {
 $data = json_decode($response,true);
 
 $mintemp = ($data['forecast']['forecastday'][0]['day']['mintemp_c']);
+$hum = ($data['forecast']['forecastday'][0]['day']['avghumidity']);
+
+//testgetallen
+//$mintemp = -3;
+//$hum = 70;
+
+$mintemp = (int)$mintemp;

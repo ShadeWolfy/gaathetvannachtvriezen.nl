@@ -1,13 +1,84 @@
 body {
-    background: #afd1f2;
     font-family: sans-serif;
+    height: 100%;
 }
-.Title {
+
+body.vriezen {
+    background-color: #afd1f2;
+}
+
+body.dooien {
+    background-color: #f9f871;
+}
+
+.title {
     text-align: center;
+    font-size: 60px;
     margin-top: 5%;
 }
 
-.Footer {
+.footer {
     position: absolute; bottom: 5px; right: 5px;
     font-size: 12px;
+}
+.container {
+    max-width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.verdict {
+    width: 100%;
+    max-width: 100%;
+    text-align: right;
+}
+
+.container-img {
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container-img img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.data {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Terug naar één kolom op mobiel */
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .verdict {
+        order: 2; /* Wijzig de volgorde op mobiel naar 2 (verdict komt na container-img) */
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .container-img {
+        order: 1; /* Wijzig de volgorde op mobiel naar 1 (container-img komt eerst) */
+    }
+
+    .data {
+        order: 3; /* Wijzig de volgorde op mobiel naar 3 (data komt als laatste) */
+        text-align: center;
+    }
 }

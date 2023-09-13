@@ -1,4 +1,14 @@
 <?php include('../app/apicall.php'); ?>
+
+<?php
+if($mintemp <= 0) {
+    $class = 'vriezen';
+} else {
+    $class = 'dooien';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -7,17 +17,21 @@
     <title><?php echo $pageTitle; ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="<?php echo $class ;?>">
 <header>
-    <?php include('partials/header.php'); ?>
+    <h1 class="title">Gaat het vannacht vriezen?</h1>
 </header>
 
-<main>
-    <?php echo $mintemp;?>
-</main>
+<?php
+if ($class == 'vriezen') {
+    include ('partials/vriezen.php');
+} else {
+    include ('partials/dooien.php');
+}
+?>
 
 <footer>
-    <?php include('partials/footer.php'); ?>
+    <p class="footer">Door: Joey Stinkens</p>
 </footer>
 </body>
 </html>
